@@ -1,0 +1,428 @@
+/* Mobile Styles to Match Figma Design */
+
+/* Hide mobile girl image on desktop */
+.mobile-girl-image {
+  display: none;
+}
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #282828;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 100px 30px 30px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active .mobile-menu-content {
+  transform: translateX(0);
+}
+
+.mobile-nav-item {
+  font-family: "Figtree", Helvetica;
+  font-weight: 500;
+  color: #282828;
+  font-size: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+  color: #fa1239;
+}
+
+.mobile-nav-item:last-of-type {
+  border-bottom: none;
+}
+
+.mobile-cta {
+  margin-top: 40px;
+}
+
+.mobile-cta .buttons-2 {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .desktop .frame-8 {
+    padding: 0px 40px;
+  }
+
+  .desktop .frame-3 {
+    width: 55%;
+    left: 40px;
+  }
+
+  .desktop .group {
+    right: 40px;
+    max-width: 40%;
+  }
+}
+
+/* Mobile Styles - 768px and below */
+@media (max-width: 768px) {
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Hide desktop navigation */
+  .desktop-nav,
+  .desktop-cta {
+    display: none !important;
+  }
+
+  /* Show mobile menu */
+  .mobile-menu {
+    display: block;
+  }
+
+  /* Mobile Header */
+  .desktop .frame-8 {
+    padding: 0px 20px;
+    height: 70px;
+  }
+
+  .desktop .group-3 {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Mobile Hero Section */
+  .desktop .hero-section {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .desktop .div {
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .desktop .frame-3 {
+    width: calc(100% - 40px);
+    left: 20px;
+    top: -100px;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .desktop .your-resume-deserves {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+
+  .desktop .span,
+  .desktop .text-wrapper-2,
+  .desktop .text-wrapper-3 {
+    line-height: 38px;
+  }
+
+  .desktop .if-your-resume-isn-t {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .desktop .frame-4 {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .desktop .buttons,
+  .desktop .contact-wrapper {
+    width: 200px;
+    height: 48px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .desktop .contact,
+  .desktop .contact-2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide desktop hero image on mobile */
+  .desktop .group {
+    display: none;
+  }
+
+  /* Show mobile girl image */
+  .desktop .mobile-girl-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 30px auto;
+    text-align: center;
+  }
+
+  .desktop .mobile-girl-image .group-2 {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .desktop .mobile-girl-image .portrait-happy-young {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  /* Mobile stats section */
+  .desktop .frame-5 {
+    position: static;
+    margin: 40px 20px 0;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .desktop .frame-6,
+  .desktop .frame-7 {
+    flex: 1;
+    text-align: center;
+  }
+
+  .desktop .text-wrapper-4 {
+    font-size: 36px;
+  }
+
+  .desktop .text-wrapper-5 {
+    font-size: 14px;
+  }
+
+  /* Mobile Features Section */
+  .desktop .frame-10 {
+    padding: 40px 20px;
+    margin-top: 50px;
+  }
+
+  .desktop .what-you-get-wrapper {
+    margin-top: 0px !important;
+  }
+
+  .desktop .frame-11 {
+    gap: 30px;
+  }
+
+  .desktop .you-re-not-just {
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .desktop .what-you-get {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .desktop .frame-14 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .desktop .frame-15 {
+    width: 100%;
+    min-width: 100%;
+    padding: 24px 20px;
+  }
+
+  .desktop .p,
+  .desktop .text-wrapper-10 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .desktop .text-wrapper-9 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* Hide background image on mobile */
+  .desktop .img {
+    display: none;
+  }
+}
+
+/* Small Mobile Styles - 480px and below */
+@media (max-width: 480px) {
+  .desktop .frame-8 {
+    height: 60px;
+    padding: 0px 16px;
+  }
+
+  .desktop .group-3 {
+    width: 100px;
+  }
+
+  .hamburger-menu {
+    width: 20px;
+    height: 16px;
+  }
+
+  .mobile-menu-content {
+    width: 100%;
+    padding: 80px 20px 30px;
+  }
+
+  .desktop .frame-3 {
+    left: 16px;
+    width: calc(100% - 32px);
+    top: 100px;
+  }
+
+  .desktop .your-resume-deserves {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .desktop .if-your-resume-isn-t {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .desktop .buttons,
+  .desktop .contact-wrapper {
+    width: 150px;
+    height: 36px;
+    padding: 4px 8px;
+  }
+
+  .desktop .contact,
+  .desktop .contact-2 {
+    font-size: 10px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .desktop .frame-5 {
+    margin: 30px 16px 0;
+    padding: 16px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .desktop .text-wrapper-4 {
+    font-size: 32px;
+  }
+
+  .desktop .text-wrapper-5 {
+    font-size: 12px;
+  }
+
+  .desktop .frame-10 {
+    padding: 30px 16px;
+  }
+
+  .desktop .you-re-not-just {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .desktop .what-you-get {
+    font-size: 13px;
+  }
+
+  .desktop .frame-15 {
+    padding: 20px 16px;
+  }
+
+  .desktop .p,
+  .desktop .text-wrapper-10 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .desktop .text-wrapper-9 {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/* Close button for mobile menu */
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #282828;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

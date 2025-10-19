@@ -1,0 +1,11 @@
+:root {
+  --colorpalletneutralneutral-500: rgba(0, 0, 0, 1);
+  --colorpalletprimaryprimary-500: rgba(250, 18, 57, 1);
+  --typography-18-medium-font-family: "Figtree", Helvetica;
+  --typography-18-medium-font-weight: 500;
+  --typography-18-medium-font-size: 18px;
+  --typography-18-medium-letter-spacing: 0px;
+  --typography-18-medium-line-height: normal;
+  --typography-18-medium-font-style: normal;
+  --button-shadow: 0px 0px 12px 0px rgba(250, 18, 57, 0.58);
+}
